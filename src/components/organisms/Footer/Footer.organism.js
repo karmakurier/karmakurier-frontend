@@ -1,12 +1,30 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Karmakurier from '../../atoms/Karmakurier/Karmakurier.atom'
 import './Footer.organism.scss'
 
-function Footer() {
+const Footer = () => {
+    const year = new Date().getFullYear()
     return (
-        <div className="footer">
-            <div className="faq">Coming soon...</div>
-            <div className="imprint">Coming soon...</div>
-        </div>
+        <footer className="footer">
+            <div className="info">
+                <div className="links">
+                    <Link to="/faq">Häufig gestellte Fragen</Link>
+                    <div className="social-media" />
+                </div>
+            </div>
+            <div className="smallprint">
+                <div className="copy">
+                    &copy;{year}&nbsp;
+                    <Karmakurier />
+                </div>
+                <div className="legal">
+                    <Link to="/imprint">Impressum</Link>
+                    <Link to="/agb">AGB</Link>
+                    <Link to="/privacy">Datenschutz</Link>
+                </div>
+            </div>
+        </footer>
     )
 }
 

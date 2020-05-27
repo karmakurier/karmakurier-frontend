@@ -9,8 +9,8 @@ const Header = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className="header">
-            <Logo inverted={open} />
+        <header>
+            <Logo inverted={open} close={() => setOpen(false)} />
             <div className="actions">
                 <Link to="/login">Anmelden</Link>
                 <Link to="/register">Registrieren</Link>
@@ -23,7 +23,7 @@ const Header = () => {
                 inverted={open}
             />
             <Menu visible={open} close={() => setOpen(false)} />
-        </div>
+        </header>
     )
 }
 

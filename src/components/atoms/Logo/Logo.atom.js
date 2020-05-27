@@ -4,9 +4,9 @@ import logoInverted from '../../../assets/logo-inverted.svg'
 import logo from '../../../assets/logo.svg'
 import './Logo.atom.scss'
 
-function Logo({ inverted }) {
+function Logo({ inverted, close }) {
     return (
-        <Link to="/">
+        <Link to="/" onClick={close}>
             <div className="logo">
                 <img src={inverted ? logoInverted : logo} alt="karmakurier logo" />
             </div>

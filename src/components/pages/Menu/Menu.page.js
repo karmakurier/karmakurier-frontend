@@ -5,7 +5,7 @@ import Logo from '../../atoms/Logo/Logo.atom'
 import './Menu.page.scss'
 
 const Menu = ({ visible, close }) => {
-    // keep in sync with routes.js
+    // needs to be kept in sync with routes.js
     const links = [
         {
             path: '/',
@@ -28,7 +28,7 @@ const Menu = ({ visible, close }) => {
     return (
         <div className={visible ? 'menu visible' : 'menu'}>
             <div className="header">
-                <Logo inverted={visible} />
+                <Logo inverted={visible} close={close} />
             </div>
             <div className={visible ? 'menu-content visible' : 'menu-content'}>
                 <ul>
