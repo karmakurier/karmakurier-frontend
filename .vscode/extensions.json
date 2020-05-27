@@ -1,0 +1,14 @@
+{
+    // recommended VS Code extensions for this project
+    "recommendations": [
+        "dsznajder.es7-react-js-snippets",
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "CoenraadS.bracket-pair-colorizer",
+        "sleistner.vscode-fileutils",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag",
+        "stylelint.vscode-stylelint"
+    ]
+}

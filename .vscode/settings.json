@@ -1,0 +1,40 @@
+{
+    // tell the ESLint plugin to run on save
+    "eslint.enable": true,
+    "eslint.validate": ["html", "javascript", "javascriptreact"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
+        "source.organizeImports": true
+    },
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    "stylelint.enable": true,
+    "prettier.disableLanguages": ["javascript", "javascriptreact"],
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "files.autoSave": "off",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "window.zoomLevel": 0,
+    "files.exclude": {
+        ".eslintcache": true,
+        ".stylelintcache": true
+    },
+    "search.exclude": {
+        "/coverage": true,
+        "/node_modules": true
+    }
+}

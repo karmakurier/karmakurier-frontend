@@ -1,0 +1,46 @@
+@import 'styles/colors.scss';
+
+$burger-width: 20px;
+
+.burger-menu {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 9999;
+    background: transparent;
+    padding: 10px;
+    margin: 10px;
+    outline: 0;
+    border: 0;
+
+    &.open {
+        .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+            transform: rotate(-45deg) translate(-4px, 4px);
+        }
+
+        .bar2 {
+            opacity: 0;
+        }
+
+        .bar3 {
+            -webkit-transform: rotate(45deg) translate(-4px, -4px);
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+    }
+
+    > div {
+        width: $burger-width;
+        height: 2px;
+        background-color: $black;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    &:hover > div {
+        background-color: $papaya;
+    }
+
+    &.inverted > div {
+        background-color: $white;
+    }
+}

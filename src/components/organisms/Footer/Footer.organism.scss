@@ -1,0 +1,16 @@
+@import 'styles/colors.scss';
+
+.footer {
+    grid-area: bottom;
+    align-self: stretch;
+    justify-self: stretch;
+
+    color: $white;
+    background-color: $royaleBlue;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
