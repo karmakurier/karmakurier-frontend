@@ -1,10 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import slugify from 'slugify'
 import Karmakurier from '../../atoms/Karmakurier/Karmakurier.atom'
 import './Footer.organism.scss'
 
 const Footer = () => {
     const year = new Date().getFullYear()
+    const legals = [
+        {
+            path: '/imprint',
+            menuEntry: 'Impressum',
+        },
+        {
+            path: '/agb',
+            menuEntry: 'AGB',
+        },
+        {
+            path: '/privacy',
+            menuEntry: 'Datenschutz',
+        },
+    ]
+
     return (
         <footer className="footer">
             <div className="info">
@@ -19,9 +35,11 @@ const Footer = () => {
                     <Karmakurier />
                 </div>
                 <div className="legal">
-                    <Link to="/imprint">Impressum</Link>
-                    <Link to="/agb">AGB</Link>
-                    <Link to="/privacy">Datenschutz</Link>
+                    {legals.map((legal) => (
+                        <Link key={slugify(legal.path)} to={legal.path}>
+                            {legal.menuEntry}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </footer>
