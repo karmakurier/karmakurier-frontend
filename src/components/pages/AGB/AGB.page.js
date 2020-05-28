@@ -1,14 +1,14 @@
 import React from 'react'
 import MainLayout from '../../templates/MainLayout/MainLayout.page'
 
-const FAQ = () => {
+const AGB = () => {
     return (
         <MainLayout>
             <div className="section">
-                <h1>Häufig gestellte Fragen</h1>
+                <h1>Allgemeine Geschäftsbedingungen</h1>
             </div>
         </MainLayout>
     )
 }
 
-export default FAQ
+export default AGB

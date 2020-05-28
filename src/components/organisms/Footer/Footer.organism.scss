@@ -1,6 +1,6 @@
 @import 'styles/colors.scss';
 
-.footer {
+footer {
     grid-area: bottom;
     align-self: stretch;
     justify-self: stretch;
@@ -8,9 +8,39 @@
     color: $white;
     background-color: $royaleBlue;
 
-    padding: 10px;
+    padding: 20px 10px;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+
+        transition: color 300ms linear;
+
+        &:hover {
+            color: $papaya;
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .smallprint {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .legal {
+            a {
+                padding: 0 10px;
+            }
+        }
+    }
 }
