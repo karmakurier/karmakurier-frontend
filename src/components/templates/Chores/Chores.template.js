@@ -1,6 +1,6 @@
 import React from 'react'
 import slugify from 'slugify'
-import choreAsset from '../../../assets/chore.png'
+import choreAsset from '../../../assets/img/chore.png'
 import './Chores.template.scss'
 
 function Chores() {
