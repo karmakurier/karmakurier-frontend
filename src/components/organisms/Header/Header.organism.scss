@@ -11,16 +11,25 @@ header {
     .actions {
         width: 80%;
         text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
         a {
+            display: flex;
+            align-items: center;
+
+            font-size: 16px;
             padding: 0 10px;
             color: $black;
             text-decoration: none;
-            font-size: 14px;
 
-            transition: color 300ms linear;
+            i {
+                transition: color 300ms linear;
+                font-size: 20px;
+            }
 
-            &:hover {
+            &:hover i {
                 color: $papaya;
             }
         }

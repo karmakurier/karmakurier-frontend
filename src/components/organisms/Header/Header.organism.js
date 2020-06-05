@@ -12,8 +12,14 @@ const Header = () => {
         <header>
             <Logo inverted={open} close={() => setOpen(false)} />
             <div className="actions">
-                <Link to="/login">Anmelden</Link>
-                <Link to="/register">Registrieren</Link>
+                <Link to="/login">
+                    <i className="icon-enter" />
+                    &nbsp;Anmelden
+                </Link>
+                <Link to="/register">
+                    <i className="icon-users" />
+                    &nbsp;Registrieren
+                </Link>
             </div>
             <BurgerIcon
                 onClick={() => {
