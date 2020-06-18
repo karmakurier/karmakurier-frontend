@@ -1,0 +1,10 @@
+# Folders
+node_modules
+.git
+.vscode
+docs
+
+# Files
+*.md
+.gitignore
+LICENSE
