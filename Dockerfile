@@ -28,6 +28,8 @@ RUN apk update \
     && apk add lighttpd \
     && rm -rf /var/cache/apk/*
 
+COPY docker/lighttpd.conf /etc/lighttpd/lighttpd.conf
+
 # Get webapp files from previous step (see PART 1)
 COPY --from=builder /usr/src/app/build /var/www/localhost/htdocs
 
