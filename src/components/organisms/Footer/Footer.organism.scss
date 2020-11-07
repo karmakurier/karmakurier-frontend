@@ -1,12 +1,26 @@
 @import 'styles/colors.scss';
+@import 'styles/globals.scss';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
 
 footer {
     grid-area: bottom;
+    height: $footer-height-sm;
+
+    @media (min-width: 576px) {
+        height: $footer-height-sm;
+    }
+
+    @media (min-width: 768px) {
+        height: $footer-height-md;
+    }
+
     align-self: stretch;
     justify-self: stretch;
 
-    color: $white;
-    background-color: $royaleBlue;
+    color: $font_light;
+    background-color: $main1_3;
 
     padding: 20px 10px;
 
@@ -15,7 +29,7 @@ footer {
     justify-content: space-between;
 
     a {
-        color: $white;
+        color: $font_light;
         text-decoration: none;
         font-size: 14px;
 

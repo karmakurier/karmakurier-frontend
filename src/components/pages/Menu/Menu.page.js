@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
-import Logo from '../../atoms/Logo/Logo.atom'
 import './Menu.page.scss'
 
 const Menu = ({ visible, close }) => {
@@ -27,9 +26,10 @@ const Menu = ({ visible, close }) => {
 
     return (
         <div className={visible ? 'menu visible' : 'menu'}>
-            <div className="header">
+            {/* <div className="header">
                 <Logo inverted={visible} close={close} />
-            </div>
+                <Karmakurier inverted={visible} />
+            </div> */}
             <div className={visible ? 'menu-content visible' : 'menu-content'}>
                 <ul>
                     {links.map((link) => (

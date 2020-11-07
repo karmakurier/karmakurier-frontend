@@ -1,5 +1,14 @@
 @import 'styles/colors.scss';
 
 .highlight {
-    color: $papaya;
+    display: flex;
+    z-index: 9999;
+    color: $main1_3;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.inverted {
+    color: $font_light;
 }

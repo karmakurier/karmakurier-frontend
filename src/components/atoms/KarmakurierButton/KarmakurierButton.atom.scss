@@ -1,0 +1,58 @@
+@import 'styles/fonts.scss';
+@import 'styles/colors';
+
+.buttonclass {
+    Button {
+        font-family: 'Quicksand', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        border-radius: 20px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        box-shadow: none;
+        text-transform: lowercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        height: 36px;
+        border-right: 1px solid;
+    }
+}
+
+.primary {
+    Button {
+        background-color: $main4_3;
+        border-color: $main4_3;
+        color: $font_light;
+    }
+
+    Button:hover {
+        background-color: $main4_3;
+        border-color: $main4_3;
+    }
+}
+
+.secondary {
+    Button {
+        background-color: $main1_3;
+        border-color: $main1_3;
+        color: $font_light;
+    }
+
+    Button:hover {
+        background-color: $main1_3;
+        border-color: $main1_3;
+    }
+}
+
+.outlined {
+    Button {
+        border-color: $main2_3;
+        color: $main2_3;
+    }
+
+    Button:hover {
+        border-color: $main2_3;
+        color: $main2_3;
+    }
+}

@@ -1,5 +1,6 @@
 // bootstrap
 @import '~bootstrap/scss/bootstrap-grid';
+
 // modules
 @import 'styles/fonts.scss';
 @import 'styles/colors';
@@ -13,7 +14,8 @@ body,
 
 body {
     margin: 0;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    color: $font_black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -29,8 +31,9 @@ code {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px 1fr 100px;
+    //grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 0 1fr 0;
+    //grid-template-rows: 50px 1fr 100px;
     grid-template-areas:
         'top top top'
         'left content right'
@@ -42,15 +45,16 @@ code {
 
     .section {
         display: flex;
+        padding: 31px 23px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: left;
         width: 100%;
-        min-height: 100vh;
+        min-height: 60vh;
 
         h1 {
-            color: $black;
+            color: $font_black;
 
             .highlight {
                 color: $papaya;

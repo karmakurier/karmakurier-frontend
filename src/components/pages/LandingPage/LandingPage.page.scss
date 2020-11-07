@@ -1,1 +1,32 @@
 @import 'styles/colors.scss';
+
+.picture {
+    text-align: center;
+
+    img {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+}
+
+.theme-main-1 {
+    background-color: $main1_1;
+}
+
+.theme-main-2 {
+    background-color: $white;
+}
+
+.theme-main-3 {
+    background-color: $main2_3;
+    color: $font_light;
+
+    h1 {
+        color: $font_light;
+    }
+}
+
+.theme-main-4 {
+    background-color: $main4_1;
+}

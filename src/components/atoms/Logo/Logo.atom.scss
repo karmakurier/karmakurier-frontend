@@ -1,8 +1,15 @@
 @import 'styles/colors.scss';
 
 .logo {
-    width: 100px;
-    height: auto;
-    padding: 10px;
-    z-index: 9000;
+    float: left;
+    display: flex;
+    justify-content: center;
+    margin-left: 11px;
+    padding: 16px;
+
+    img {
+        width: auto;
+        height: 21px;
+        z-index: 9999;
+    }
 }

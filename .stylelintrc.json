@@ -22,7 +22,7 @@
         "declaration-bang-space-before": "always",
         "declaration-bang-space-after": "never",
         "function-calc-no-invalid": null,
-        "declaration-property-value-blacklist": {
+        "declaration-property-value-disallowed-list": {
             "/^border-\\w+$/": ["none"]
         },
         "color-named": "never",
@@ -41,7 +41,7 @@
         "no-duplicate-selectors": true,
         "max-nesting-depth": 6,
         "property-no-unknown": true,
-        "unit-whitelist": [
+        "unit-allowed-list": [
             "fr",
             "ch",
             "em",

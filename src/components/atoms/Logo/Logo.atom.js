@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logoInverted from '../../../assets/img/logo-inverted.svg'
-import logo from '../../../assets/img/logo.svg'
+import logo from '../../../assets/img/karmakurier_logo_salmon.svg'
+import logoInverted from '../../../assets/img/karmakurier_logo_white.svg'
 import './Logo.atom.scss'
 
-function Logo({ inverted, close }) {
+const Logo = ({ inverted, close }) => {
     return (
         <Link to="/" onClick={close}>
             <div className="logo">
