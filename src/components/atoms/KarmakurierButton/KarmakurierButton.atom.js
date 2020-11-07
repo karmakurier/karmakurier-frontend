@@ -3,13 +3,28 @@ import classNames from 'classnames/bind'
 import React from 'react'
 import './KarmakurierButton.atom.scss'
 
-const KarmakurierButton = ({ label, variant, link, onClick }) => {
-    const classes = classNames('buttonclass', variant)
+const KarmakurierButton = ({ label, variant, size, link, onClick }) => {
+    let btnSize = 'normal'
+    let fullWidth = false
+
+    switch (size) {
+        case 'full': {
+            btnSize = 'btnFull'
+            fullWidth = true
+            break
+        }
+
+        default: {
+            break
+        }
+    }
+
+    const classes = classNames('buttonclass', variant, btnSize)
     const btnType = variant === 'outlined' ? 'outlined' : 'contained'
 
     return (
         <div className={classes}>
-            <Button variant={btnType} href={link} variantonClick={onClick}>
+            <Button fullWidth={fullWidth} variant={btnType} href={link} variantonClick={onClick}>
                 {label}
             </Button>
         </div>

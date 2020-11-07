@@ -29,7 +29,12 @@ const LandingPage = () => {
                     <img src={startmobile} alt="unsere motivation" />
                     <h2>wir sehen hilfe anders</h2>
                     <h1>karmakurier</h1>
-                    <KarmakurierButton label="kontaktiere uns" variant={primary} link="" />
+                    <KarmakurierButton
+                        size="normal"
+                        label="kontaktiere uns"
+                        variant={primary}
+                        link=""
+                    />
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 1)}>
