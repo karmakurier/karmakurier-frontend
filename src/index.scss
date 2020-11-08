@@ -2,8 +2,8 @@
 @import '~bootstrap/scss/bootstrap-grid';
 
 // modules
-@import 'styles/fonts.scss';
-@import 'styles/colors';
+@import 'src/styles/fonts.scss';
+@import 'src/styles/colors';
 
 html,
 body,
@@ -44,7 +44,6 @@ code {
     }
 
     .section {
-        display: flex;
         padding: 31px 23px;
         flex-direction: column;
         justify-content: center;

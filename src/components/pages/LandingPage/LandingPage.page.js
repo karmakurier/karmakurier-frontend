@@ -20,8 +20,6 @@ const LandingPage = () => {
         }
     }
 
-    const primary = 'primary'
-
     return (
         <MainLayout>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 0)}>
@@ -32,8 +30,8 @@ const LandingPage = () => {
                     <KarmakurierButton
                         size="normal"
                         label="kontaktiere uns"
-                        variant={primary}
-                        link=""
+                        variant="primary"
+                        link="/contact"
                     />
                 </div>
             </InView>

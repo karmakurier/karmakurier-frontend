@@ -1,1 +1,10 @@
 @import 'src/styles/colors.scss';
+
+.headPicture {
+    background-color: $main1_1;
+
+    svg {
+        display: block;
+        margin: auto;
+    }
+}

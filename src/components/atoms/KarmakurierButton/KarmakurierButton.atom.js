@@ -4,7 +4,7 @@ import React from 'react'
 import './KarmakurierButton.atom.scss'
 
 const KarmakurierButton = ({ label, variant, size, link, onClick }) => {
-    let btnSize = 'normal'
+    let btnSize = 'btnNormal'
     let fullWidth = false
 
     switch (size) {
@@ -20,7 +20,7 @@ const KarmakurierButton = ({ label, variant, size, link, onClick }) => {
     }
 
     const classes = classNames('buttonclass', variant, btnSize)
-    const btnType = variant === 'outlined' ? 'outlined' : 'contained'
+    const btnType = variant === 'outlined' || variant === 'menuitem' ? 'outlined' : 'contained'
 
     return (
         <div className={classes}>

@@ -5,6 +5,10 @@
 @import '~bootstrap/scss/variables';
 
 footer {
+    h5 {
+        font-size: 1.125em;
+        line-height: 1.125em;
+    }
     grid-area: bottom;
     height: $footer-height-sm;
 
@@ -28,6 +32,18 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 
+    .menu-list {
+        list-style-type: none;
+        margin: 0.625em 0;
+        padding: 0;
+        font-size: 0.875em;
+
+        li {
+            line-height: 1.0625em;
+            text-indent: 0;
+        }
+    }
+
     a {
         color: $font_light;
         text-decoration: none;
@@ -36,8 +52,12 @@ footer {
         transition: color 300ms linear;
 
         &:hover {
-            color: $papaya;
+            color: $font_light;
         }
+    }
+
+    .copy {
+        width: 100%;
     }
 
     .info {

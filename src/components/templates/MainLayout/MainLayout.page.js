@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../../organisms/Footer/Footer.organism'
 import Header from '../../organisms/Header/Header.organism'
+import './MainLayout.page.scss'
 
 const MainLayout = ({ children }) => {
     return (

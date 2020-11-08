@@ -2,8 +2,10 @@ import React from 'react'
 import About from './components/pages/About/About.page'
 import Contact from './components/pages/Contact/Contact.page'
 import FAQ from './components/pages/FAQ/FAQ.page'
+import Imprint from './components/pages/Imprint/Imprint.page'
 import LandingPage from './components/pages/LandingPage/LandingPage.page'
 import Login from './components/pages/Login/Login.page'
+import Privacy from './components/pages/Privacy/Privacy.page'
 import Register from './components/pages/Register/Register.page'
 
 /**
@@ -39,6 +41,16 @@ export const routes = [
         path: '/register',
         menuEntry: 'Als Helfer registrieren',
         main: () => <Register />,
+    },
+    {
+        path: '/imprint',
+        menuEntry: 'impressum',
+        main: () => <Imprint />,
+    },
+    {
+        path: '/privacy',
+        menuEntry: 'datenschutz',
+        main: () => <Privacy />,
     },
 ]
 

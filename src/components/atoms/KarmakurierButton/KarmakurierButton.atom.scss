@@ -2,11 +2,11 @@
 @import 'src/styles/colors';
 
 .buttonclass {
-    Button {
+    Button,
+    a {
         font-family: 'Quicksand', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        border-radius: 1.25em;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
             border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         box-shadow: none;
@@ -19,44 +19,97 @@
         border-style: solid;
     }
 
-    Button:hover {
+    Button:hover,
+    a:hover {
         box-shadow: none;
     }
 }
 
+.btnNormal {
+    Button,
+    a {
+        border-radius: 1.875em;
+    }
+}
+
+.btnFull {
+    width: 100%;
+
+    Button,
+    a {
+        border-radius: 0.375em;
+    }
+}
+
 .primary {
-    Button {
+    Button,
+    a {
         background-color: $main4_3;
         border-color: $main4_3;
         color: $font_light;
     }
 
-    Button:hover {
+    Button:hover,
+    a:hover {
         background-color: $main4_3;
         border-color: $main4_3;
     }
 }
 
 .secondary {
-    Button {
+    Button,
+    a {
         background-color: $main1_3;
         border-color: $main1_3;
         color: $font_light;
     }
 
-    Button:hover {
+    Button:hover,
+    a:hover {
         background-color: $main1_3;
         border-color: $main1_3;
     }
 }
 
+.prominent {
+    Button,
+    a {
+        background-color: $main2_3;
+        border-color: $main2_3;
+        color: $font_light;
+    }
+
+    Button:hover,
+    a:hover {
+        background-color: $main2_3;
+        border-color: $main2_3;
+    }
+}
+
+.decent {
+    Button,
+    a {
+        background-color: transparent;
+        border-color: $font_light;
+        color: $font_light;
+    }
+
+    Button:hover,
+    a:hover {
+        background-color: transparent;
+        border-color: $font_light;
+    }
+}
+
 .outlined {
-    Button {
+    Button,
+    a {
         border-color: $main2_3;
         color: $main2_3;
     }
 
-    Button:hover {
+    Button:hover,
+    a:hover {
         border-color: $main2_3;
         color: $main2_3;
     }
