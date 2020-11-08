@@ -33,6 +33,7 @@ RUN chmod 700 /etc/nginx/ssl
 # COPY all needed nginx related files (config & ssl)
 COPY ./docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/nginx/karmakurier.org.conf /etc/nginx/sites-enabled
+COPY ./docker/nginx/staging.karmakurier.org.conf /etc/nginx/sites-enabled
 COPY ./docker/nginx/security.conf /etc/nginx/nginxconfig.io
 COPY ./docker/nginx/general.conf /etc/nginx/nginxconfig.io
 COPY ./docker/nginx/proxy.conf /etc/nginx/nginxconfig.io
