@@ -30,30 +30,45 @@ code {
     min-height: 100%;
     width: 100%;
 
-    display: grid;
-    //grid-template-columns: 50px 1fr 50px;
-    grid-template-columns: 0 1fr 0;
-    //grid-template-rows: 50px 1fr 100px;
-    grid-template-areas:
-        'top top top'
-        'left content right'
-        'bottom bottom bottom';
-
     .content {
-        grid-area: content;
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (min-width: 1023px) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        @media (min-width: 1439px) {
+            font-size: 22px;
+            line-height: 28px;
+        }
     }
 
     .section {
         padding: 31px 23px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: left;
         width: 100%;
         min-height: 60vh;
 
+        .MuiGrid-container {
+            min-height: inherit;
+        }
+
+        @media (min-width: 1023px) {
+            padding: 31px 81px;
+            min-height: 60vh;
+        }
+        @media (min-width: 1439px) {
+            padding: 31px 140px;
+            min-height: 100vh;
+        }
+
         h1 {
-            color: $font_black;
+            font-size: 30px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 38px;
+            margin-bottom: 30px;
 
             .highlight {
                 color: $papaya;
