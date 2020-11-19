@@ -24,7 +24,7 @@ const KarmakurierButton = ({ label, variant, size, link, onClick }) => {
 
     return (
         <div className={classes}>
-            <Button fullWidth={fullWidth} variant={btnType} href={link} variantonClick={onClick}>
+            <Button fullWidth={fullWidth} variant={btnType} href={link} onClick={onClick}>
                 {label}
             </Button>
         </div>
