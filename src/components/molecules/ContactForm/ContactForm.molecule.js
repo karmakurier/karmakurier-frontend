@@ -1,6 +1,8 @@
+import Grid from '@material-ui/core/Grid'
 import React from 'react'
 import KarmakurierButton from '../../atoms/KarmakurierButton/KarmakurierButton.atom'
 import KarmakurierTextfield from '../../atoms/KarmakurierTextfield/KarmakurierTextfield.atom'
+import './ContactForm.molecule.scss'
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -60,31 +62,41 @@ class ContactForm extends React.Component {
         return (
             <div className="contactForm">
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <KarmakurierTextfield
-                        id="name"
-                        label="Name"
-                        value={name}
-                        onChange={this.onNameChange}
-                    />
-                    <KarmakurierTextfield
-                        id="email"
-                        label="E-Mail-Adresse"
-                        value={email}
-                        onChange={this.onEmailChange}
-                    />
-                    <KarmakurierTextfield
-                        id="message"
-                        label="Nachricht"
-                        value={message}
-                        multiline
-                        onChange={this.onMessageChange}
-                    />
-                    <KarmakurierButton
-                        size="normal"
-                        label="abschicken"
-                        variant="primary"
-                        link="/contact"
-                    />
+                    <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={12} sm={12}>
+                            <KarmakurierTextfield
+                                id="name"
+                                label="Name"
+                                value={name}
+                                onChange={this.onNameChange}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12}>
+                            <KarmakurierTextfield
+                                id="email"
+                                label="E-Mail-Adresse"
+                                value={email}
+                                onChange={this.onEmailChange}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12}>
+                            <KarmakurierTextfield
+                                id="message"
+                                label="Nachricht"
+                                value={message}
+                                textfield
+                                onChange={this.onMessageChange}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={12} justify="center">
+                            <KarmakurierButton
+                                size="normal"
+                                label="abschicken"
+                                variant="primary"
+                                link="/contact"
+                            />
+                        </Grid>
+                    </Grid>
                 </form>
             </div>
         )
