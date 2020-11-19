@@ -2,10 +2,10 @@ import Grid from '@material-ui/core/Grid'
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { Picture } from 'react-responsive-picture'
-import aboutus from '../../../assets/img/landingpage/atom_undraw_aboutus.svg'
-import motivation from '../../../assets/img/landingpage/atom_undraw_motivation.svg'
-import vision from '../../../assets/img/landingpage/atom_undraw_vision.svg'
-import ourgoals from '../../../assets/img/landingpage/atom_undraw_ziele.svg'
+import { ReactComponent as Aboutus } from '../../../assets/img/landingpage/atom_undraw_aboutus.svg'
+import { ReactComponent as Motivation } from '../../../assets/img/landingpage/atom_undraw_motivation.svg'
+import { ReactComponent as Vision } from '../../../assets/img/landingpage/atom_undraw_vision.svg'
+import { ReactComponent as OurGoals } from '../../../assets/img/landingpage/atom_undraw_ziele.svg'
 import startwide from '../../../assets/img/landingpage/desktop/atom_draw_landingpage_wide.svg'
 import startsmall from '../../../assets/img/landingpage/mobile/atom_draw_landingpage_short.svg'
 import KarmakurierButton from '../../atoms/KarmakurierButton/KarmakurierButton.atom'
@@ -42,11 +42,8 @@ const LandingPage = () => {
                         />
 
                         <Grid item xs={12} sm={12} justify="center">
-                            <h2>wir sehen hilfe anders</h2>
-                            <h1>karmakurier</h1>
-                        </Grid>
-                        <Grid item xs={12} sm={12}>
-                            <h2>wir sehen hilfe anders</h2>
+                            <h5>wir sehen hilfe anders</h5>
+                            <h4>karmakurier</h4>
                         </Grid>
                         <Grid item xs={12} sm={12}>
                             <KarmakurierButton
@@ -60,11 +57,11 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 1)}>
-                <div className="section theme-main-2">
+                <div id="vision" className="section theme-main-2">
                     <Grid container spacing={3} justify="space-between" alignItems="center">
                         <Grid item xs={12} sm={7}>
                             <div className="picture">
-                                <img src={vision} alt="unsere vision" />
+                                <Vision />
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={5}>
@@ -79,7 +76,7 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 2)}>
-                <div className="section theme-main-3">
+                <div id="motivation" className="section theme-main-3">
                     <Grid
                         container
                         spacing={3}
@@ -89,7 +86,7 @@ const LandingPage = () => {
                     >
                         <Grid item xs={12} sm={7}>
                             <div className="picture">
-                                <img src={motivation} alt="unsere motivation" />
+                                <Motivation />
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={5}>
@@ -115,11 +112,11 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 3)}>
-                <div className="section theme-main-2">
+                <div id="ziele" className="section theme-main-2">
                     <Grid container spacing={3} justify="space-between" alignItems="center">
                         <Grid item xs={12} sm={7}>
                             <div className="picture">
-                                <img src={ourgoals} alt="unsere ziele" />
+                                <OurGoals />
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={5}>
@@ -150,7 +147,7 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 4)}>
-                <div className="section theme-main-4">
+                <div id="preview" className="section theme-main-4">
                     <h1>vorschau app</h1>
                     <div className="content">
                         <p>
@@ -174,11 +171,11 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 5)}>
-                <div className="section theme-main-2">
+                <div id="aboutus" className="section theme-main-2">
                     <Grid container spacing={3} justify="space-between" alignItems="center">
                         <Grid item xs={12} sm={7}>
                             <div className="picture">
-                                <img src={aboutus} alt="über uns" />
+                                <Aboutus />
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={5}>

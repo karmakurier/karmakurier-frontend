@@ -4,14 +4,42 @@
     text-align: center;
 
     img {
-        width: 50%;
         display: block;
         margin: auto;
+    }
+
+    svg {
+        display: block;
+        margin: auto;
+        width: 100%;
+        min-height: inherit;
     }
 }
 
 .theme-main-1 {
     background-color: $main1_1;
+
+    h4 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 45px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .buttonclass {
+        text-align: center;
+    }
 }
 
 .theme-main-2 {
