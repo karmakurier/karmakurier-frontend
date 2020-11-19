@@ -1,3 +1,4 @@
+import Grid from '@material-ui/core/Grid'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
@@ -9,44 +10,48 @@ const Footer = () => {
     const legals = [
         {
             path: '/contact',
-            menuEntry: 'Kontakt',
+            menuEntry: 'kontakt',
         },
         {
             path: '/privacy',
-            menuEntry: 'Datenschutz',
+            menuEntry: 'datenschutz',
         },
         {
             path: '/imprint',
-            menuEntry: 'Impressum',
+            menuEntry: 'impressum',
         },
     ]
 
     return (
         <footer className="footer">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-6 mb-md-0 mb-3">
-                        <h5 className="text-uppercase">karmakurier</h5>
-                        <ul className="list-unstyled menu-list legal">
-                            {legals.map((legal) => (
-                                <li>
-                                    <Link key={slugify(legal.path)} to={legal.path}>
-                                        {legal.menuEntry}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="col-md6 mt-md-0 mt-3">
-                        <SocialMediaBar />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md1 mt-md-0 mt-3">
-                        <div className="copy">&copy;{year}&nbsp;karmakurier</div>
-                    </div>
-                </div>
-            </div>
+            <Grid
+                container
+                spacing={2}
+                justify="space-between"
+                alignItems="center"
+                direction="row-reverse"
+            >
+                <Grid item xs={12} sm={4}>
+                    <SocialMediaBar />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <h5 className="text-uppercase">karmakurier</h5>
+                    <ul className="list-unstyled menu-list legal">
+                        {legals.map((legal) => (
+                            <li>
+                                <Link key={slugify(legal.path)} to={legal.path}>
+                                    {legal.menuEntry}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3} justify="space-between" alignItems="center">
+                <Grid item xs={12} sm={12}>
+                    <div className="copyright">&copy;{year}&nbsp;karmakurier</div>
+                </Grid>
+            </Grid>
         </footer>
     )
 }
