@@ -1,7 +1,9 @@
 @import 'src/styles/colors.scss';
+@import 'react-slideshow-image/dist/styles.css';
 
 .picture {
     text-align: center;
+    min-height: 30vh;
 
     img {
         display: block;
@@ -14,6 +16,29 @@
         width: 100%;
         min-height: inherit;
     }
+}
+
+.inlinePicture {
+    img {
+        width: 100%;
+    }
+}
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 350px;
+}
+
+.each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
 }
 
 .theme-main-1 {
@@ -57,4 +82,8 @@
 
 .theme-main-4 {
     background-color: $main4_1;
+}
+
+.theme-main-5 {
+    background-color: $main3_6;
 }

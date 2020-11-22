@@ -33,7 +33,11 @@ const Menu = ({ visible, close }) => {
             menuEntry: 'über uns',
         },
         {
-            path: '/#supporter',
+            path: '/#ourpartners',
+            menuEntry: 'partner',
+        },
+        {
+            path: '/#oursupporters',
             menuEntry: 'unterstützer',
         },
     ]
