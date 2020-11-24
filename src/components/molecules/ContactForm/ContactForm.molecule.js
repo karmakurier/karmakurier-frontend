@@ -13,7 +13,7 @@ class ContactForm extends React.Component {
             email: '',
             message: '',
             captcha: '',
-            captchasvg: `${process.env.REACT_APP_CONTACT_BASEURL}/captcha`,
+            captchasvg: `${process.env.REACT_APP_CONTACT_BASEURL}/contactapi-captcha`,
             captchaWrong: false,
             submitSuccess: false,
         }
@@ -32,7 +32,9 @@ class ContactForm extends React.Component {
 
     loadSvg() {
         const newDate = Date.now()
-        this.setState({ captchasvg: `${process.env.REACT_APP_CONTACT_BASEURL}/captcha?${newDate}` })
+        this.setState({
+            captchasvg: `${process.env.REACT_APP_CONTACT_BASEURL}/contactapi-captcha?${newDate}`,
+        })
     }
 
     handleSubmit() {
