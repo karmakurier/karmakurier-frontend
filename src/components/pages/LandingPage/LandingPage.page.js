@@ -2,6 +2,9 @@ import Grid from '@material-ui/core/Grid'
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { Picture } from 'react-responsive-picture'
+import { Slide } from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
+import slugify from 'slugify'
 import { ReactComponent as Aboutus } from '../../../assets/img/landingpage/atom_undraw_aboutus.svg'
 import { ReactComponent as Motivation } from '../../../assets/img/landingpage/atom_undraw_motivation.svg'
 import { ReactComponent as Vision } from '../../../assets/img/landingpage/atom_undraw_vision.svg'
@@ -22,6 +25,45 @@ const LandingPage = () => {
             setActiveSection(sectionId)
         }
     }
+
+    const appPreviewSlides = [
+        'img/landingpage/apppreview/mobileapp_dashboard.png',
+        'img/landingpage/apppreview/mobileapp_matches.png',
+    ]
+
+    const supporterLinks = [
+        {
+            imgPath: 'img/supporter/atom_logo_aws.png',
+            link: 'https://aws.amazon.com/de/',
+        },
+        {
+            imgPath: 'img/supporter/atom_logo_lupp+partner.png',
+            link: 'https://lupp-partner.com/',
+        },
+        {
+            imgPath: 'img/supporter/atom_logo_rafael baer.png',
+            link: 'https://www.rafaelbaer.de/',
+        },
+        {
+            imgPath: 'img/supporter/atom_logo_wespark.png',
+            link: 'https://www.wespark.io/',
+        },
+    ]
+
+    const partnerLinks = [
+        {
+            imgPath: 'img/partner/logo_connectedhelp.png',
+            link: 'https://connected-help.org/',
+        },
+        {
+            imgPath: 'img/partner/logo_guteidee.png',
+            link: 'https://lupp-partner.com/',
+        },
+        {
+            imgPath: 'img/partner/logo_participaid.png',
+            link: 'https://participaid.org/',
+        },
+    ]
 
     return (
         <MainLayout>
@@ -99,12 +141,13 @@ const LandingPage = () => {
                                     Strukturen wie Freundeskreise.
                                 </p>
                                 <p>
-                                    Hilfesuchende müssen psychologische Hürden überwinden und
+                                    Hilfesuchende müssen oft psychologische Hürden überwinden und
                                     Vertrauen zu unbekannten Helfer:innen aufbauen.
                                 </p>
                                 <p>
-                                    Solidarität gegenüber Fremden nimmt bei Andauern der Krise
-                                    wieder ab.
+                                    Solidarität gegenüber Fremden hat zu Beginn der Krise deutlich
+                                    zugenommen. Diese nimmt jedoch bei Andauern der Krise wieder
+                                    stark ab.
                                 </p>
                             </div>
                         </Grid>
@@ -150,23 +193,14 @@ const LandingPage = () => {
                 <div id="preview" className="section theme-main-4">
                     <h1>vorschau app</h1>
                     <div className="content">
-                        <p>
-                            Entwicklung einer App für punktuelle und individuelle Unterstützung,
-                            kombiniert mit Matching von Hilfesuchenden und Helfer:innen über Distanz
-                            und Inhalt, mit Hilfe von KI-getriebene Modellen (Phase II).
-                        </p>
-
-                        <p>
-                            Etablierung eines Karmapunktesystems zur positiven Verstärkung;
-                            gesammelte Punkte können zudem gespendet werden, sodass alle Beteiligte
-                            Gutes tun können.
-                        </p>
-
-                        <p>
-                            Visualisierung der gelebten Solidarität wird visualisiert, sodass jeder
-                            sehen kann wie das Helfen und Hilfe bekommen in der eigenen Gemeinschaft
-                            stattfindet.
-                        </p>
+                        <Slide>
+                            <div className="each-slide">
+                                <div style={{ backgroundImage: `url(${appPreviewSlides[0]})` }} />
+                            </div>
+                            <div className="each-slide">
+                                <div style={{ backgroundImage: `url(${appPreviewSlides[1]})` }} />
+                            </div>
+                        </Slide>
                     </div>
                 </div>
             </InView>
@@ -192,13 +226,77 @@ const LandingPage = () => {
                                     entwickeln, die den ganzen Kurs der gelebten Solidarität positiv
                                     beeinflusst.
                                 </p>
+                                <KarmakurierButton
+                                    size="normal"
+                                    label="kontaktiere uns"
+                                    variant="prominent"
+                                    link="/contact"
+                                />
                             </div>
                         </Grid>
                     </Grid>
                 </div>
             </InView>
+            <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 6)}>
+                <div id="ourpartners" className="section theme-main-5">
+                    <Grid
+                        container
+                        spacing={3}
+                        direction="row"
+                        justify="space-between"
+                        alignItems="flex-start"
+                    >
+                        <Grid item xs={12} sm={12}>
+                            <h1>unsere partner</h1>
+                        </Grid>
+                        {partnerLinks.map((partnerLink) => (
+                            <Grid item xs={12} sm={4} className="inlinePicture">
+                                <a
+                                    href={partnerLink.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={partnerLink.imgPath}
+                                        alt={slugify(partnerLink.link)}
+                                    />
+                                </a>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </InView>
+            <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 7)}>
+                <div id="oursupporter" className="section theme-main-2">
+                    <Grid
+                        container
+                        spacing={3}
+                        direction="row"
+                        justify="space-between"
+                        alignItems="flex-start"
+                    >
+                        <Grid item xs={12} sm={12}>
+                            <h1>unsere unterstützer</h1>
+                        </Grid>
+                        {supporterLinks.map((supporterLink) => (
+                            <Grid item xs={12} sm={4} className="inlinePicture">
+                                <a
+                                    href={supporterLink.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={supporterLink.imgPath}
+                                        alt={slugify(supporterLink.link)}
+                                    />
+                                </a>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </InView>
 
-            <LocationIndicator sectionCount="6" activeSection={activeSection} />
+            <LocationIndicator sectionCount="8" activeSection={activeSection} />
         </MainLayout>
     )
 }
