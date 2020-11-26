@@ -68,8 +68,8 @@ const Menu = ({ visible, close }) => {
                 <Karmakurier inverted={visible} />
             </div> */}
             <div className={visible ? 'menu-content visible' : 'menu-content'}>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} sm={12}>
+                <Grid container justify="flex-start" alignItems="flex-start">
+                    <Grid item xs={12} sm={6}>
                         <ul className="shortlinks">
                             {anchors.map((anchor) => (
                                 <li key={slugify(anchor.path)}>
@@ -80,10 +80,10 @@ const Menu = ({ visible, close }) => {
                             ))}
                         </ul>
                     </Grid>
-                    <Grid item xs={12} sm={12}>
+                    <Grid item xs={12} sm={false}>
                         <hr />
                     </Grid>
-                    <Grid item xs={12} sm={12}>
+                    <Grid item xs={12} sm={6}>
                         <ul className="deeplinks">
                             {links.map((link) => (
                                 <li key={slugify(link.path)}>
