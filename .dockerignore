@@ -8,3 +8,5 @@ docs
 *.md
 .gitignore
 LICENSE
+Dockerfile.lighttpd
+docker/nginx/lighttpd.conf
