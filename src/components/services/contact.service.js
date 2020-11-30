@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-const rootUrl = process.env.REACT_APP_CONTACT_BASEURL
 const ContactAPI = {
     sendContactMail: async (name, email, message, captcha) => {
         const contactFormObject = {
@@ -9,13 +8,13 @@ const ContactAPI = {
             message,
             captcha,
         }
-        const response = await axios.post(`${rootUrl}/contact`, contactFormObject, {
+        const response = await axios.post(`/contactapi-contact`, contactFormObject, {
             withCredentials: true,
         })
         return response.data
     },
     getCaptcha: async () => {
-        const response = await axios.get(`${rootUrl}/captcha`, { withCredentials: true })
+        const response = await axios.get(`/contactapi-captcha`, { withCredentials: true })
         return response.data
     },
 }
