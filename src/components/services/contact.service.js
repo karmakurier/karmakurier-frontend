@@ -8,7 +8,7 @@ const ContactAPI = {
             message,
             captcha,
         }
-        const response = await axios.post(`/contactapi-contact`, contactFormObject, {
+        const response = await axios.post(`/contactapi-contact/`, contactFormObject, {
             withCredentials: true,
         })
         return response.data

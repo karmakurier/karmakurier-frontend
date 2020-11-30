@@ -85,7 +85,7 @@ class ContactForm extends React.Component {
         } = this.state
 
         return (
-            <div id="contact-form">
+            <form id="contact-form">
                 <Grid container spacing={2} className="contactForm" alignItems="center">
                     <Grid item xs={12} sm={12}>
                         <KarmakurierTextfield
@@ -142,7 +142,7 @@ class ContactForm extends React.Component {
                         </Grid>
                     )}
                 </Grid>
-            </div>
+            </form>
         )
     }
 }
