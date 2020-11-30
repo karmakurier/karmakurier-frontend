@@ -9,13 +9,13 @@ const ContactAPI = {
             message,
             captcha,
         }
-        const response = await axios.post(`${rootUrl}/contactapi-contact`, contactFormObject, {
+        const response = await axios.post(`${rootUrl}/contact`, contactFormObject, {
             withCredentials: true,
         })
         return response.data
     },
     getCaptcha: async () => {
-        const response = await axios.get(`${rootUrl}/contactapi-captcha`, { withCredentials: true })
+        const response = await axios.get(`${rootUrl}/captcha`, { withCredentials: true })
         return response.data
     },
 }
