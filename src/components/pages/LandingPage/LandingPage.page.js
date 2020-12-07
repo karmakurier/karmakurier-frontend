@@ -33,35 +33,51 @@ const LandingPage = () => {
 
     const supporterLinks = [
         {
-            imgPath: 'img/supporter/atom_logo_aws.png',
+            imgPath: 'img/supporter/logo-gridscale.png',
+            link: 'https://gridscale.io/',
+        },
+        {
+            imgPath: 'img/supporter/logo-aws.png',
             link: 'https://aws.amazon.com/de/',
         },
         {
-            imgPath: 'img/supporter/atom_logo_lupp+partner.png',
+            imgPath: 'img/supporter/logo-gruen.png',
+            link: 'https://www.gruen.net/',
+        },
+        {
+            imgPath: 'img/supporter/logo-lupppartner.png',
             link: 'https://lupp-partner.com/',
         },
         {
-            imgPath: 'img/supporter/atom_logo_rafael baer.png',
+            imgPath: 'img/supporter/logo-rafaelbaer.png',
             link: 'https://www.rafaelbaer.de/',
         },
         {
-            imgPath: 'img/supporter/atom_logo_wespark.png',
-            link: 'https://www.wespark.io/',
+            imgPath: 'img/supporter/logo-intersoft.png',
+            link: 'https://www.intersoft-consulting.de/',
         },
     ]
 
     const partnerLinks = [
         {
-            imgPath: 'img/partner/logo_connectedhelp.png',
-            link: 'https://connected-help.org/',
+            imgPath: 'img/partner/logo-wespark.png',
+            link: 'https://www.wespark.io/',
         },
         {
-            imgPath: 'img/partner/logo_guteidee.png',
-            link: 'https://lupp-partner.com/',
-        },
-        {
-            imgPath: 'img/partner/logo_participaid.png',
+            imgPath: 'img/partner/logo-pandalist.png',
             link: 'https://participaid.org/',
+        },
+        {
+            imgPath: 'img/partner/logo-send.png',
+            link: 'https://www.send-ev.de/',
+        },
+        {
+            imgPath: 'img/partner/logo-stadtretter.png',
+            link: 'https://www.die-stadtretter.de/',
+        },
+        {
+            imgPath: 'img/partner/logo-guteidee.png',
+            link: 'https://lupp-partner.com/',
         },
     ]
 
