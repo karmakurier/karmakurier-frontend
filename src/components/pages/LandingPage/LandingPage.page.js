@@ -60,8 +60,8 @@ const LandingPage = () => {
 
     const partnerLinks = [
         {
-            imgPath: 'img/partner/logo-wespark.png',
-            link: 'https://www.wespark.io/',
+            imgPath: 'img/partner/logo-se.png',
+            link: 'https://wirvsvirus.org/solution-enabler/',
         },
         {
             imgPath: 'img/partner/logo-pandalist.png',
@@ -294,6 +294,7 @@ const LandingPage = () => {
                         <Grid item xs={12} sm={12}>
                             <h1>unsere unterstützer</h1>
                         </Grid>
+
                         {supporterLinks.map((supporterLink) => (
                             <Grid item xs={12} sm={4} className="inlinePicture">
                                 <a
