@@ -64,6 +64,10 @@ const LandingPage = () => {
             link: 'https://wirvsvirus.org/solution-enabler/',
         },
         {
+            imgPath: 'img/partner/logo-participaid.png',
+            link: 'https://participaid.com',
+        },
+        {
             imgPath: 'img/partner/logo-pandalist.png',
             link: 'https://participaid.org/',
         },
