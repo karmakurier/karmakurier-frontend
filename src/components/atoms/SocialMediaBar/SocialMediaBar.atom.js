@@ -32,7 +32,7 @@ const SocialMediaBar = () => {
     return (
         <div className="socialmediabar">
             {socialLinks.map((socialLink) => (
-                <div className="socialmedia-logo">
+                <div className="socialmedia-logo" key={socialLink.link}>
                     <a href={socialLink.link} target="_blank" rel="noopener noreferrer">
                         <img src={socialLink.icon} alt={slugify(socialLink.name)} />
                     </a>
