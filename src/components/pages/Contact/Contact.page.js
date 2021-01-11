@@ -1,12 +1,15 @@
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ReactComponent as ContactIcon } from '../../../assets/img/contactform/atom_undraw_kontakt.svg'
 import ContactForm from '../../molecules/ContactForm/ContactForm.molecule'
 import MainLayout from '../../templates/MainLayout/MainLayout.page'
 import './Contact.page.scss'
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <MainLayout>
             <div className="contactForm">

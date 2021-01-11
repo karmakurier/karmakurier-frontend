@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from '../../templates/MainLayout/MainLayout.page'
 
 const Imprint = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <MainLayout>
             <h1>Impressum</h1>

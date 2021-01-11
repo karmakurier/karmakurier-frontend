@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from '../../templates/MainLayout/MainLayout.page'
 
 const Privacy = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <MainLayout>
             <h1>Datenschutz</h1>
