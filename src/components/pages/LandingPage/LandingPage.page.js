@@ -319,7 +319,7 @@ const LandingPage = () => {
                 </div>
             </InView>
             <InView threshold={threshold} onChange={(inView) => handleViewChange(inView, 7)}>
-                <div id="oursupporter" className="section theme-main-2">
+                <div id="oursupporters" className="section theme-main-2">
                     <Container maxWidth="md" className="container-section">
                         <Grid
                             container
