@@ -2,8 +2,9 @@
 @import 'react-slideshow-image/dist/styles.css';
 
 .picture {
-    text-align: center;
+    text-align: left;
     min-height: 30vh;
+    width: 100%;
 
     img {
         display: block;
@@ -15,6 +16,11 @@
         margin: auto;
         width: 100%;
         min-height: inherit;
+    }
+
+    svg:not(:root) {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -95,4 +101,8 @@
 
 .theme-main-5 {
     background-color: $main3_6;
+}
+
+.container-section {
+    min-height: 60vh;
 }
