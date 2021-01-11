@@ -103,6 +103,23 @@
     background-color: $main3_6;
 }
 
+.MuiContainer-root {
+    min-height: inherit;
+    box-sizing: inherit;
+    max-height: 100%;
+}
 .container-section {
-    min-height: 60vh;
+    padding: 31px 23px;
+    .MuiGrid-container {
+        min-height: inherit;
+    }
+
+    @media (min-width: 1023px) {
+        padding: 31px 81px;
+        min-height: 60vh;
+    }
+    @media (min-width: 1439px) {
+        padding: 31px 140px;
+        min-height: 70vh;
+    }
 }
