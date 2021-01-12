@@ -46,20 +46,19 @@ code {
     .section {
         padding: 31px 23px;
         text-align: left;
-        //width: 100%;
         min-height: 60vh;
-        //box-sizing: inherit;
+        box-sizing: inherit;
 
         .MuiGrid-container {
             min-height: inherit;
         }
 
         @media (min-width: 1023px) {
-            padding: 31px 81px;
+            //padding: 31px 81px;
             min-height: 60vh;
         }
         @media (min-width: 1439px) {
-            padding: 31px 140px;
+            //padding: 31px 140px;
             min-height: 70vh;
         }
 
