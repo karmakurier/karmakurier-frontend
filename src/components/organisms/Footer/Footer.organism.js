@@ -38,10 +38,8 @@ const Footer = () => {
                     <h5 className="text-uppercase">karmakurier</h5>
                     <ul className="list-unstyled menu-list legal">
                         {legals.map((legal) => (
-                            <li>
-                                <Link key={slugify(legal.path)} to={legal.path}>
-                                    {legal.menuEntry}
-                                </Link>
+                            <li key={slugify(legal.path)}>
+                                <Link to={legal.path}>{legal.menuEntry}</Link>
                             </li>
                         ))}
                     </ul>

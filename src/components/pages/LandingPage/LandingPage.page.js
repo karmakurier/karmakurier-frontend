@@ -103,7 +103,7 @@ const LandingPage = () => {
                             ]}
                         />
 
-                        <Grid item xs={12} sm={12} justify="center">
+                        <Grid item xs={12} sm={12}>
                             <h5>wir sehen hilfe anders</h5>
                             <h4>karmakurier</h4>
                         </Grid>
@@ -270,7 +270,13 @@ const LandingPage = () => {
                             <h1>unsere partner</h1>
                         </Grid>
                         {partnerLinks.map((partnerLink) => (
-                            <Grid item xs={12} sm={4} className="inlinePicture">
+                            <Grid
+                                item
+                                xs={12}
+                                sm={4}
+                                className="inlinePicture"
+                                key={partnerLink.link}
+                            >
                                 <a
                                     href={partnerLink.link}
                                     target="_blank"
@@ -300,7 +306,13 @@ const LandingPage = () => {
                         </Grid>
 
                         {supporterLinks.map((supporterLink) => (
-                            <Grid item xs={12} sm={4} className="inlinePicture">
+                            <Grid
+                                item
+                                xs={12}
+                                sm={4}
+                                className="inlinePicture"
+                                key={supporterLink.link}
+                            >
                                 <a
                                     href={supporterLink.link}
                                     target="_blank"
