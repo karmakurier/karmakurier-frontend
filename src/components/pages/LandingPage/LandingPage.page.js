@@ -82,7 +82,7 @@ const LandingPage = () => {
         },
         {
             imgPath: 'img/partner/logo-guteidee.png',
-            link: 'https://lupp-partner.com/',
+            link: '',
         },
     ]
 
@@ -302,16 +302,24 @@ const LandingPage = () => {
                                     className="inlinePicture"
                                     key={partnerLink.link}
                                 >
-                                    <a
-                                        href={partnerLink.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
+                                    {partnerLink.link && (
+                                        <a
+                                            href={partnerLink.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src={partnerLink.imgPath}
+                                                alt={slugify(partnerLink.link)}
+                                            />
+                                        </a>
+                                    )}
+                                    {!partnerLink.link && (
                                         <img
                                             src={partnerLink.imgPath}
                                             alt={slugify(partnerLink.link)}
                                         />
-                                    </a>
+                                    )}
                                 </Grid>
                             ))}
                         </Grid>
