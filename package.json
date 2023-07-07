@@ -61,7 +61,7 @@
         "lint-staged": "^10.5.1",
         "prettier": "^2.1.2",
         "react-app-rewired": "^2.1.6",
-        "stylelint": "^13.9.0",
+        "stylelint": "^15.10.1",
         "stylelint-config-recommended": "^3.0.0",
         "stylelint-declaration-use-variable": "^1.7.2",
         "stylelint-scss": "^3.19.0",
